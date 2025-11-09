@@ -37,6 +37,5 @@ The models were trained and evaluated on a labeled sentiment dataset.
 
 > Replace the `xx` with your actual metrics from `src/results/metrics`.
 
----
 
-## 📁 Project Structure
+
