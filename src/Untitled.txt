@@ -1,0 +1,2538 @@
+
+C:\Users\srava\Downloads\sentiment-analysis-project\src>python run_experiments.py
+Matplotlib is building the font cache; this may take a moment.
+
+⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
+🎓 SENTIMENT ANALYSIS PROJECT
+🎬 IMDb Movie Review Classification
+⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
+
+
+🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪
+🎉 STARTING ALL EXPERIMENTS!
+🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪
+
+
+======================================================================
+📊 EXPERIMENT SET 1: Testing Different Architectures
+======================================================================
+
+🔬 Experiment 1: RNN
+
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+🚀 STARTING NEW EXPERIMENT
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+📋 Configuration:
+   vocab_size: 10000
+   embedding_dim: 100
+   hidden_dim: 64
+   output_dim: 1
+   n_layers: 2
+   dropout: 0.3
+   batch_size: 32
+   n_epochs: 5
+   learning_rate: 0.001
+   architecture: rnn
+   activation: tanh
+   optimizer: adam
+   sequence_length: 50
+   gradient_clipping: 1.0
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+
+🌱 Random seed set to 42 - Results will be the same every time!
+🐢 Using CPU (this will be slower, but it works!)
+
+📚 Loading and preprocessing data...
+📂 Loading movie reviews from data folder...
+Traceback (most recent call last):
+  File "C:\Users\srava\Downloads\sentiment-analysis-project\src\run_experiments.py", line 289, in <module>
+    run_all_experiments()
+  File "C:\Users\srava\Downloads\sentiment-analysis-project\src\run_experiments.py", line 191, in run_all_experiments
+    results = run_single_experiment(config)
+  File "C:\Users\srava\Downloads\sentiment-analysis-project\src\run_experiments.py", line 45, in run_single_experiment
+    train_data, train_labels, test_data, test_labels = load_imdb_data()
+  File "C:\Users\srava\Downloads\sentiment-analysis-project\src\preprocess.py", line 22, in load_imdb_data
+    train_data = np.load('data/train_data.npy', allow_pickle=True)
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\numpy\lib\npyio.py", line 405, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: 'data/train_data.npy'
+
+C:\Users\srava\Downloads\sentiment-analysis-project\src>cd ..
+
+C:\Users\srava\Downloads\sentiment-analysis-project>python download_data.py
+🎬 Starting to download movie reviews...
+This might take a few minutes, like waiting for popcorn! 🍿
+✅ Downloaded successfully!
+📊 Training reviews: 25000
+📊 Testing reviews: 25000
+💾 Saving data to the 'data' folder...
+🎉 All done! Data is saved and ready!
+✨ You're doing AMAZING! Ready for the next step!
+
+C:\Users\srava\Downloads\sentiment-analysis-project>cd src
+
+C:\Users\srava\Downloads\sentiment-analysis-project\src>python run_experiments.py
+
+⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
+🎓 SENTIMENT ANALYSIS PROJECT
+🎬 IMDb Movie Review Classification
+⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
+
+
+🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪
+🎉 STARTING ALL EXPERIMENTS!
+🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪
+
+
+======================================================================
+📊 EXPERIMENT SET 1: Testing Different Architectures
+======================================================================
+
+🔬 Experiment 1: RNN
+
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+🚀 STARTING NEW EXPERIMENT
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+📋 Configuration:
+   vocab_size: 10000
+   embedding_dim: 100
+   hidden_dim: 64
+   output_dim: 1
+   n_layers: 2
+   dropout: 0.3
+   batch_size: 32
+   n_epochs: 5
+   learning_rate: 0.001
+   architecture: rnn
+   activation: tanh
+   optimizer: adam
+   sequence_length: 50
+   gradient_clipping: 1.0
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+
+🌱 Random seed set to 42 - Results will be the same every time!
+🐢 Using CPU (this will be slower, but it works!)
+
+📚 Loading and preprocessing data...
+📂 Loading movie reviews from data folder...
+✅ Loaded 25000 training reviews
+✅ Loaded 25000 testing reviews
+✂️ Preparing reviews with length 50 words...
+📊 Average review length (before padding):
+   Training: 238.7 words
+   Testing: 230.8 words
+📏 After padding/truncating: 50 words
+✅ Preprocessing complete!
+📦 Creating data batches of size 32...
+✅ Created 782 training batches
+✅ Created 782 testing batches
+
+🤖 Creating RNN model...
+
+🎯 Creating a RNN model...
+🏗️ Building Simple RNN with tanh activation...
+✅ Simple RNN built successfully!
+🔢 Total parameters: 1,019,009
+🎓 Trainable parameters: 1,019,009
+🎓 Setting up ADAM optimizer with learning rate 0.001...
+
+🏋️‍♂️ Starting training...
+
+======================================================================
+🚀 Starting training for 5 epochs...
+======================================================================
+
+📚 Epoch 1/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.7038
+   Batch 200/782 - Loss: 0.7033
+   Batch 300/782 - Loss: 0.7025
+   Batch 400/782 - Loss: 0.6997
+   Batch 500/782 - Loss: 0.6804
+   Batch 600/782 - Loss: 0.7052
+   Batch 700/782 - Loss: 0.6669
+
+   ✅ Train Loss: 0.6949
+   ✅ Test Loss: 0.6815
+   ✅ Test Accuracy: 57.01%
+   ⏱️  Time: 1m 44s
+
+📚 Epoch 2/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6945
+   Batch 200/782 - Loss: 0.7165
+   Batch 300/782 - Loss: 0.6791
+   Batch 400/782 - Loss: 0.6788
+   Batch 500/782 - Loss: 0.6461
+   Batch 600/782 - Loss: 0.7012
+   Batch 700/782 - Loss: 0.6984
+
+   ✅ Train Loss: 0.6886
+   ✅ Test Loss: 0.6909
+   ✅ Test Accuracy: 52.78%
+   ⏱️  Time: 1m 4s
+
+📚 Epoch 3/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.7107
+   Batch 200/782 - Loss: 0.6395
+   Batch 300/782 - Loss: 0.6713
+   Batch 400/782 - Loss: 0.6655
+   Batch 500/782 - Loss: 0.7051
+   Batch 600/782 - Loss: 0.6725
+   Batch 700/782 - Loss: 0.6821
+
+   ✅ Train Loss: 0.6784
+   ✅ Test Loss: 0.6787
+   ✅ Test Accuracy: 56.89%
+   ⏱️  Time: 1m 1s
+
+📚 Epoch 4/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6254
+   Batch 200/782 - Loss: 0.6332
+   Batch 300/782 - Loss: 0.6311
+   Batch 400/782 - Loss: 0.6981
+   Batch 500/782 - Loss: 0.6956
+   Batch 600/782 - Loss: 0.6251
+   Batch 700/782 - Loss: 0.6663
+
+   ✅ Train Loss: 0.6616
+   ✅ Test Loss: 0.6955
+   ✅ Test Accuracy: 59.19%
+   ⏱️  Time: 1m 16s
+
+📚 Epoch 5/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.5751
+   Batch 200/782 - Loss: 0.6719
+   Batch 300/782 - Loss: 0.5819
+   Batch 400/782 - Loss: 0.6309
+   Batch 500/782 - Loss: 0.5777
+   Batch 600/782 - Loss: 0.6909
+   Batch 700/782 - Loss: 0.6554
+
+   ✅ Train Loss: 0.6449
+   ✅ Test Loss: 0.6517
+   ✅ Test Accuracy: 63.08%
+   ⏱️  Time: 1m 26s
+
+======================================================================
+🎉 Training Complete!
+⏱️  Total Time: 6m 33s
+⏱️  Average Time per Epoch: 1m 18s
+🎯 Final Test Accuracy: 63.08%
+======================================================================
+
+
+📊 Evaluating model...
+📊 Calculating detailed metrics...
+✅ Accuracy: 63.08%
+✅ F1-Score: 0.6048
+🎨 Creating training history plots...
+💾 Saved training history to results/plots/rnn_tanh_adam_seq50_clip1.0_history.png
+🎨 Creating confusion matrix...
+💾 Saved confusion matrix to results/plots/rnn_tanh_adam_seq50_clip1.0_confusion.png
+💾 Saving results to results/metrics.csv...
+✅ Results saved successfully!
+
+✅ Experiment completed successfully!
+🎯 Final Accuracy: 63.08%
+🎯 F1-Score: 0.6048
+⏱️  Total Time: 6m 33s
+
+🔬 Experiment 2: LSTM
+
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+🚀 STARTING NEW EXPERIMENT
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+📋 Configuration:
+   vocab_size: 10000
+   embedding_dim: 100
+   hidden_dim: 64
+   output_dim: 1
+   n_layers: 2
+   dropout: 0.3
+   batch_size: 32
+   n_epochs: 5
+   learning_rate: 0.001
+   architecture: lstm
+   activation: tanh
+   optimizer: adam
+   sequence_length: 50
+   gradient_clipping: 1.0
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+
+🌱 Random seed set to 42 - Results will be the same every time!
+🐢 Using CPU (this will be slower, but it works!)
+
+📚 Loading and preprocessing data...
+📂 Loading movie reviews from data folder...
+✅ Loaded 25000 training reviews
+✅ Loaded 25000 testing reviews
+✂️ Preparing reviews with length 50 words...
+📊 Average review length (before padding):
+   Training: 238.7 words
+   Testing: 230.8 words
+📏 After padding/truncating: 50 words
+✅ Preprocessing complete!
+📦 Creating data batches of size 32...
+✅ Created 782 training batches
+✅ Created 782 testing batches
+
+🤖 Creating LSTM model...
+
+🎯 Creating a LSTM model...
+🏗️ Building LSTM with tanh activation...
+✅ LSTM built successfully!
+🔢 Total parameters: 1,075,841
+🎓 Trainable parameters: 1,075,841
+🎓 Setting up ADAM optimizer with learning rate 0.001...
+
+🏋️‍♂️ Starting training...
+
+======================================================================
+🚀 Starting training for 5 epochs...
+======================================================================
+
+📚 Epoch 1/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6833
+   Batch 200/782 - Loss: 0.7005
+   Batch 300/782 - Loss: 0.6972
+   Batch 400/782 - Loss: 0.7015
+   Batch 500/782 - Loss: 0.6891
+   Batch 600/782 - Loss: 0.6875
+   Batch 700/782 - Loss: 0.6405
+
+   ✅ Train Loss: 0.6861
+   ✅ Test Loss: 0.6633
+   ✅ Test Accuracy: 62.62%
+   ⏱️  Time: 1h 58m
+
+📚 Epoch 2/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6376
+   Batch 200/782 - Loss: 0.6031
+   Batch 300/782 - Loss: 0.6162
+   Batch 400/782 - Loss: 0.6526
+   Batch 500/782 - Loss: 0.6046
+   Batch 600/782 - Loss: 0.5850
+   Batch 700/782 - Loss: 0.6132
+
+   ✅ Train Loss: 0.6189
+   ✅ Test Loss: 0.5813
+   ✅ Test Accuracy: 70.72%
+   ⏱️  Time: 3m 7s
+
+📚 Epoch 3/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.4764
+   Batch 200/782 - Loss: 0.6011
+   Batch 300/782 - Loss: 0.3160
+   Batch 400/782 - Loss: 0.5183
+   Batch 500/782 - Loss: 0.5336
+   Batch 600/782 - Loss: 0.5635
+   Batch 700/782 - Loss: 0.5645
+
+   ✅ Train Loss: 0.5395
+   ✅ Test Loss: 0.5388
+   ✅ Test Accuracy: 73.72%
+   ⏱️  Time: 2m 51s
+
+📚 Epoch 4/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.5234
+   Batch 200/782 - Loss: 0.3206
+   Batch 300/782 - Loss: 0.5056
+   Batch 400/782 - Loss: 0.3086
+   Batch 500/782 - Loss: 0.6202
+   Batch 600/782 - Loss: 0.3605
+   Batch 700/782 - Loss: 0.2936
+
+   ✅ Train Loss: 0.4896
+   ✅ Test Loss: 0.5243
+   ✅ Test Accuracy: 75.42%
+   ⏱️  Time: 2m 47s
+
+📚 Epoch 5/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.4940
+   Batch 200/782 - Loss: 0.6045
+   Batch 300/782 - Loss: 0.6908
+   Batch 400/782 - Loss: 0.6314
+   Batch 500/782 - Loss: 0.4101
+   Batch 600/782 - Loss: 0.4377
+   Batch 700/782 - Loss: 0.3657
+
+   ✅ Train Loss: 0.4463
+   ✅ Test Loss: 0.5653
+   ✅ Test Accuracy: 75.81%
+   ⏱️  Time: 2m 55s
+
+======================================================================
+🎉 Training Complete!
+⏱️  Total Time: 2h 10m
+⏱️  Average Time per Epoch: 26m 7s
+🎯 Final Test Accuracy: 75.81%
+======================================================================
+
+
+📊 Evaluating model...
+📊 Calculating detailed metrics...
+✅ Accuracy: 75.81%
+✅ F1-Score: 0.7580
+🎨 Creating training history plots...
+💾 Saved training history to results/plots/lstm_tanh_adam_seq50_clip1.0_history.png
+🎨 Creating confusion matrix...
+💾 Saved confusion matrix to results/plots/lstm_tanh_adam_seq50_clip1.0_confusion.png
+💾 Saving results to results/metrics.csv...
+✅ Results saved successfully!
+
+✅ Experiment completed successfully!
+🎯 Final Accuracy: 75.81%
+🎯 F1-Score: 0.7580
+⏱️  Total Time: 2h 10m
+
+🔬 Experiment 3: BILSTM
+
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+🚀 STARTING NEW EXPERIMENT
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+📋 Configuration:
+   vocab_size: 10000
+   embedding_dim: 100
+   hidden_dim: 64
+   output_dim: 1
+   n_layers: 2
+   dropout: 0.3
+   batch_size: 32
+   n_epochs: 5
+   learning_rate: 0.001
+   architecture: bilstm
+   activation: tanh
+   optimizer: adam
+   sequence_length: 50
+   gradient_clipping: 1.0
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+
+🌱 Random seed set to 42 - Results will be the same every time!
+🐢 Using CPU (this will be slower, but it works!)
+
+📚 Loading and preprocessing data...
+📂 Loading movie reviews from data folder...
+✅ Loaded 25000 training reviews
+✅ Loaded 25000 testing reviews
+✂️ Preparing reviews with length 50 words...
+📊 Average review length (before padding):
+   Training: 238.7 words
+   Testing: 230.8 words
+📏 After padding/truncating: 50 words
+✅ Preprocessing complete!
+📦 Creating data batches of size 32...
+✅ Created 782 training batches
+✅ Created 782 testing batches
+
+🤖 Creating BILSTM model...
+
+🎯 Creating a BILSTM model...
+🏗️ Building Bidirectional LSTM with tanh activation...
+✅ Bidirectional LSTM built successfully!
+🔢 Total parameters: 1,184,449
+🎓 Trainable parameters: 1,184,449
+🎓 Setting up ADAM optimizer with learning rate 0.001...
+
+🏋️‍♂️ Starting training...
+
+======================================================================
+🚀 Starting training for 5 epochs...
+======================================================================
+
+📚 Epoch 1/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6912
+   Batch 200/782 - Loss: 0.6858
+   Batch 300/782 - Loss: 0.6973
+   Batch 400/782 - Loss: 0.5913
+   Batch 500/782 - Loss: 0.5718
+   Batch 600/782 - Loss: 0.7111
+   Batch 700/782 - Loss: 0.6707
+
+   ✅ Train Loss: 0.6469
+   ✅ Test Loss: 0.6205
+   ✅ Test Accuracy: 68.58%
+   ⏱️  Time: 5m 25s
+
+📚 Epoch 2/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.5354
+   Batch 200/782 - Loss: 0.4999
+   Batch 300/782 - Loss: 0.4619
+   Batch 400/782 - Loss: 0.5209
+   Batch 500/782 - Loss: 0.5778
+   Batch 600/782 - Loss: 0.4626
+   Batch 700/782 - Loss: 0.5344
+
+   ✅ Train Loss: 0.5507
+   ✅ Test Loss: 0.5413
+   ✅ Test Accuracy: 73.67%
+   ⏱️  Time: 5m 48s
+
+📚 Epoch 3/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.5535
+   Batch 200/782 - Loss: 0.6056
+   Batch 300/782 - Loss: 0.5827
+   Batch 400/782 - Loss: 0.4899
+   Batch 500/782 - Loss: 0.3772
+   Batch 600/782 - Loss: 0.6097
+   Batch 700/782 - Loss: 0.5962
+
+   ✅ Train Loss: 0.4826
+   ✅ Test Loss: 0.5119
+   ✅ Test Accuracy: 75.52%
+   ⏱️  Time: 5m 20s
+
+📚 Epoch 4/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.4355
+   Batch 200/782 - Loss: 0.2681
+   Batch 300/782 - Loss: 0.4168
+   Batch 400/782 - Loss: 0.5223
+   Batch 500/782 - Loss: 0.4386
+   Batch 600/782 - Loss: 0.2626
+   Batch 700/782 - Loss: 0.4912
+
+   ✅ Train Loss: 0.4326
+   ✅ Test Loss: 0.5162
+   ✅ Test Accuracy: 76.42%
+   ⏱️  Time: 5m 59s
+
+📚 Epoch 5/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.2530
+   Batch 200/782 - Loss: 0.5649
+   Batch 300/782 - Loss: 0.4495
+   Batch 400/782 - Loss: 0.2921
+   Batch 500/782 - Loss: 0.3389
+   Batch 600/782 - Loss: 0.2478
+   Batch 700/782 - Loss: 0.4156
+
+   ✅ Train Loss: 0.3998
+   ✅ Test Loss: 0.5132
+   ✅ Test Accuracy: 76.79%
+   ⏱️  Time: 5m 47s
+
+======================================================================
+🎉 Training Complete!
+⏱️  Total Time: 28m 21s
+⏱️  Average Time per Epoch: 5m 40s
+🎯 Final Test Accuracy: 76.79%
+======================================================================
+
+
+📊 Evaluating model...
+📊 Calculating detailed metrics...
+✅ Accuracy: 76.79%
+✅ F1-Score: 0.7671
+🎨 Creating training history plots...
+💾 Saved training history to results/plots/bilstm_tanh_adam_seq50_clip1.0_history.png
+🎨 Creating confusion matrix...
+💾 Saved confusion matrix to results/plots/bilstm_tanh_adam_seq50_clip1.0_confusion.png
+💾 Saving results to results/metrics.csv...
+✅ Results saved successfully!
+
+✅ Experiment completed successfully!
+🎯 Final Accuracy: 76.79%
+🎯 F1-Score: 0.7671
+⏱️  Total Time: 28m 21s
+
+======================================================================
+📊 EXPERIMENT SET 2: Testing Different Activation Functions
+======================================================================
+
+🔬 Experiment 4: SIGMOID activation
+
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+🚀 STARTING NEW EXPERIMENT
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+📋 Configuration:
+   vocab_size: 10000
+   embedding_dim: 100
+   hidden_dim: 64
+   output_dim: 1
+   n_layers: 2
+   dropout: 0.3
+   batch_size: 32
+   n_epochs: 5
+   learning_rate: 0.001
+   architecture: lstm
+   activation: sigmoid
+   optimizer: adam
+   sequence_length: 50
+   gradient_clipping: 1.0
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+
+🌱 Random seed set to 42 - Results will be the same every time!
+🐢 Using CPU (this will be slower, but it works!)
+
+📚 Loading and preprocessing data...
+📂 Loading movie reviews from data folder...
+✅ Loaded 25000 training reviews
+✅ Loaded 25000 testing reviews
+✂️ Preparing reviews with length 50 words...
+📊 Average review length (before padding):
+   Training: 238.7 words
+   Testing: 230.8 words
+📏 After padding/truncating: 50 words
+✅ Preprocessing complete!
+📦 Creating data batches of size 32...
+✅ Created 782 training batches
+✅ Created 782 testing batches
+
+🤖 Creating LSTM model...
+
+🎯 Creating a LSTM model...
+🏗️ Building LSTM with sigmoid activation...
+✅ LSTM built successfully!
+🔢 Total parameters: 1,075,841
+🎓 Trainable parameters: 1,075,841
+🎓 Setting up ADAM optimizer with learning rate 0.001...
+
+🏋️‍♂️ Starting training...
+
+======================================================================
+🚀 Starting training for 5 epochs...
+======================================================================
+
+📚 Epoch 1/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6901
+   Batch 200/782 - Loss: 0.6970
+   Batch 300/782 - Loss: 0.7184
+   Batch 400/782 - Loss: 0.6793
+   Batch 500/782 - Loss: 0.6985
+   Batch 600/782 - Loss: 0.6641
+   Batch 700/782 - Loss: 0.7073
+
+   ✅ Train Loss: 0.6778
+   ✅ Test Loss: 0.6560
+   ✅ Test Accuracy: 62.74%
+   ⏱️  Time: 2m 46s
+
+📚 Epoch 2/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6516
+   Batch 200/782 - Loss: 0.6553
+   Batch 300/782 - Loss: 0.5546
+   Batch 400/782 - Loss: 0.6038
+   Batch 500/782 - Loss: 0.5678
+   Batch 600/782 - Loss: 0.6424
+   Batch 700/782 - Loss: 0.5777
+
+   ✅ Train Loss: 0.6164
+   ✅ Test Loss: 0.5945
+   ✅ Test Accuracy: 70.08%
+   ⏱️  Time: 2m 46s
+
+📚 Epoch 3/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.4927
+   Batch 200/782 - Loss: 0.6195
+   Batch 300/782 - Loss: 0.3687
+   Batch 400/782 - Loss: 0.5673
+   Batch 500/782 - Loss: 0.4360
+   Batch 600/782 - Loss: 0.5222
+   Batch 700/782 - Loss: 0.4941
+
+   ✅ Train Loss: 0.5467
+   ✅ Test Loss: 0.5399
+   ✅ Test Accuracy: 72.86%
+   ⏱️  Time: 2m 49s
+
+📚 Epoch 4/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.4510
+   Batch 200/782 - Loss: 0.3131
+   Batch 300/782 - Loss: 0.4130
+   Batch 400/782 - Loss: 0.3211
+   Batch 500/782 - Loss: 0.6243
+   Batch 600/782 - Loss: 0.4085
+   Batch 700/782 - Loss: 0.3602
+
+   ✅ Train Loss: 0.4978
+   ✅ Test Loss: 0.5268
+   ✅ Test Accuracy: 75.02%
+   ⏱️  Time: 2m 40s
+
+📚 Epoch 5/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.5392
+   Batch 200/782 - Loss: 0.5349
+   Batch 300/782 - Loss: 0.6472
+   Batch 400/782 - Loss: 0.7175
+   Batch 500/782 - Loss: 0.4905
+   Batch 600/782 - Loss: 0.3861
+   Batch 700/782 - Loss: 0.3614
+
+   ✅ Train Loss: 0.4537
+   ✅ Test Loss: 0.5525
+   ✅ Test Accuracy: 75.53%
+   ⏱️  Time: 3m 12s
+
+======================================================================
+🎉 Training Complete!
+⏱️  Total Time: 14m 14s
+⏱️  Average Time per Epoch: 2m 50s
+🎯 Final Test Accuracy: 75.53%
+======================================================================
+
+
+📊 Evaluating model...
+📊 Calculating detailed metrics...
+✅ Accuracy: 75.53%
+✅ F1-Score: 0.7544
+🎨 Creating training history plots...
+💾 Saved training history to results/plots/lstm_sigmoid_adam_seq50_clip1.0_history.png
+🎨 Creating confusion matrix...
+💾 Saved confusion matrix to results/plots/lstm_sigmoid_adam_seq50_clip1.0_confusion.png
+💾 Saving results to results/metrics.csv...
+✅ Results saved successfully!
+
+✅ Experiment completed successfully!
+🎯 Final Accuracy: 75.53%
+🎯 F1-Score: 0.7544
+⏱️  Total Time: 14m 14s
+
+🔬 Experiment 5: RELU activation
+
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+🚀 STARTING NEW EXPERIMENT
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+📋 Configuration:
+   vocab_size: 10000
+   embedding_dim: 100
+   hidden_dim: 64
+   output_dim: 1
+   n_layers: 2
+   dropout: 0.3
+   batch_size: 32
+   n_epochs: 5
+   learning_rate: 0.001
+   architecture: lstm
+   activation: relu
+   optimizer: adam
+   sequence_length: 50
+   gradient_clipping: 1.0
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+
+🌱 Random seed set to 42 - Results will be the same every time!
+🐢 Using CPU (this will be slower, but it works!)
+
+📚 Loading and preprocessing data...
+📂 Loading movie reviews from data folder...
+✅ Loaded 25000 training reviews
+✅ Loaded 25000 testing reviews
+✂️ Preparing reviews with length 50 words...
+📊 Average review length (before padding):
+   Training: 238.7 words
+   Testing: 230.8 words
+📏 After padding/truncating: 50 words
+✅ Preprocessing complete!
+📦 Creating data batches of size 32...
+✅ Created 782 training batches
+✅ Created 782 testing batches
+
+🤖 Creating LSTM model...
+
+🎯 Creating a LSTM model...
+🏗️ Building LSTM with relu activation...
+✅ LSTM built successfully!
+🔢 Total parameters: 1,075,841
+🎓 Trainable parameters: 1,075,841
+🎓 Setting up ADAM optimizer with learning rate 0.001...
+
+🏋️‍♂️ Starting training...
+
+======================================================================
+🚀 Starting training for 5 epochs...
+======================================================================
+
+📚 Epoch 1/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6885
+   Batch 200/782 - Loss: 0.6958
+   Batch 300/782 - Loss: 0.7176
+   Batch 400/782 - Loss: 0.6656
+   Batch 500/782 - Loss: 0.7066
+   Batch 600/782 - Loss: 0.6665
+   Batch 700/782 - Loss: 0.6568
+
+   ✅ Train Loss: 0.6743
+   ✅ Test Loss: 0.6319
+   ✅ Test Accuracy: 65.59%
+   ⏱️  Time: 3m 2s
+
+📚 Epoch 2/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6629
+   Batch 200/782 - Loss: 0.5756
+   Batch 300/782 - Loss: 0.5677
+   Batch 400/782 - Loss: 0.5368
+   Batch 500/782 - Loss: 0.5247
+   Batch 600/782 - Loss: 0.5357
+   Batch 700/782 - Loss: 0.5736
+
+   ✅ Train Loss: 0.5969
+   ✅ Test Loss: 0.5914
+   ✅ Test Accuracy: 70.80%
+   ⏱️  Time: 2m 47s
+
+📚 Epoch 3/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.5065
+   Batch 200/782 - Loss: 0.5869
+   Batch 300/782 - Loss: 0.3904
+   Batch 400/782 - Loss: 0.4294
+   Batch 500/782 - Loss: 0.4418
+   Batch 600/782 - Loss: 0.5133
+   Batch 700/782 - Loss: 0.4986
+
+   ✅ Train Loss: 0.5314
+   ✅ Test Loss: 0.5250
+   ✅ Test Accuracy: 74.14%
+   ⏱️  Time: 3m 15s
+
+📚 Epoch 4/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.5352
+   Batch 200/782 - Loss: 0.2746
+   Batch 300/782 - Loss: 0.3706
+   Batch 400/782 - Loss: 0.3503
+   Batch 500/782 - Loss: 0.5466
+   Batch 600/782 - Loss: 0.3770
+   Batch 700/782 - Loss: 0.4518
+
+   ✅ Train Loss: 0.4836
+   ✅ Test Loss: 0.5029
+   ✅ Test Accuracy: 75.56%
+   ⏱️  Time: 3m 36s
+
+📚 Epoch 5/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.4846
+   Batch 200/782 - Loss: 0.4618
+   Batch 300/782 - Loss: 0.6609
+   Batch 400/782 - Loss: 0.6507
+   Batch 500/782 - Loss: 0.4021
+   Batch 600/782 - Loss: 0.4577
+   Batch 700/782 - Loss: 0.3550
+
+   ✅ Train Loss: 0.4473
+   ✅ Test Loss: 0.5149
+   ✅ Test Accuracy: 75.73%
+   ⏱️  Time: 2m 28s
+
+======================================================================
+🎉 Training Complete!
+⏱️  Total Time: 15m 9s
+⏱️  Average Time per Epoch: 3m 1s
+🎯 Final Test Accuracy: 75.73%
+======================================================================
+
+
+📊 Evaluating model...
+📊 Calculating detailed metrics...
+✅ Accuracy: 75.73%
+✅ F1-Score: 0.7572
+🎨 Creating training history plots...
+💾 Saved training history to results/plots/lstm_relu_adam_seq50_clip1.0_history.png
+🎨 Creating confusion matrix...
+💾 Saved confusion matrix to results/plots/lstm_relu_adam_seq50_clip1.0_confusion.png
+💾 Saving results to results/metrics.csv...
+✅ Results saved successfully!
+
+✅ Experiment completed successfully!
+🎯 Final Accuracy: 75.73%
+🎯 F1-Score: 0.7572
+⏱️  Total Time: 15m 9s
+
+🔬 Experiment 6: TANH activation
+
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+🚀 STARTING NEW EXPERIMENT
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+📋 Configuration:
+   vocab_size: 10000
+   embedding_dim: 100
+   hidden_dim: 64
+   output_dim: 1
+   n_layers: 2
+   dropout: 0.3
+   batch_size: 32
+   n_epochs: 5
+   learning_rate: 0.001
+   architecture: lstm
+   activation: tanh
+   optimizer: adam
+   sequence_length: 50
+   gradient_clipping: 1.0
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+
+🌱 Random seed set to 42 - Results will be the same every time!
+🐢 Using CPU (this will be slower, but it works!)
+
+📚 Loading and preprocessing data...
+📂 Loading movie reviews from data folder...
+✅ Loaded 25000 training reviews
+✅ Loaded 25000 testing reviews
+✂️ Preparing reviews with length 50 words...
+📊 Average review length (before padding):
+   Training: 238.7 words
+   Testing: 230.8 words
+📏 After padding/truncating: 50 words
+✅ Preprocessing complete!
+📦 Creating data batches of size 32...
+✅ Created 782 training batches
+✅ Created 782 testing batches
+
+🤖 Creating LSTM model...
+
+🎯 Creating a LSTM model...
+🏗️ Building LSTM with tanh activation...
+✅ LSTM built successfully!
+🔢 Total parameters: 1,075,841
+🎓 Trainable parameters: 1,075,841
+🎓 Setting up ADAM optimizer with learning rate 0.001...
+
+🏋️‍♂️ Starting training...
+
+======================================================================
+🚀 Starting training for 5 epochs...
+======================================================================
+
+📚 Epoch 1/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6833
+   Batch 200/782 - Loss: 0.7005
+   Batch 300/782 - Loss: 0.6972
+   Batch 400/782 - Loss: 0.7015
+   Batch 500/782 - Loss: 0.6891
+   Batch 600/782 - Loss: 0.6875
+   Batch 700/782 - Loss: 0.6405
+
+   ✅ Train Loss: 0.6861
+   ✅ Test Loss: 0.6633
+   ✅ Test Accuracy: 62.62%
+   ⏱️  Time: 3m 12s
+
+📚 Epoch 2/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6376
+   Batch 200/782 - Loss: 0.6031
+   Batch 300/782 - Loss: 0.6162
+   Batch 400/782 - Loss: 0.6526
+   Batch 500/782 - Loss: 0.6046
+   Batch 600/782 - Loss: 0.5850
+   Batch 700/782 - Loss: 0.6132
+
+   ✅ Train Loss: 0.6189
+   ✅ Test Loss: 0.5813
+   ✅ Test Accuracy: 70.72%
+   ⏱️  Time: 3m 19s
+
+📚 Epoch 3/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.4764
+   Batch 200/782 - Loss: 0.6011
+   Batch 300/782 - Loss: 0.3160
+   Batch 400/782 - Loss: 0.5183
+   Batch 500/782 - Loss: 0.5336
+   Batch 600/782 - Loss: 0.5635
+   Batch 700/782 - Loss: 0.5645
+
+   ✅ Train Loss: 0.5395
+   ✅ Test Loss: 0.5388
+   ✅ Test Accuracy: 73.72%
+   ⏱️  Time: 2m 55s
+
+📚 Epoch 4/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.5234
+   Batch 200/782 - Loss: 0.3206
+   Batch 300/782 - Loss: 0.5056
+   Batch 400/782 - Loss: 0.3086
+   Batch 500/782 - Loss: 0.6202
+   Batch 600/782 - Loss: 0.3605
+   Batch 700/782 - Loss: 0.2936
+
+   ✅ Train Loss: 0.4896
+   ✅ Test Loss: 0.5243
+   ✅ Test Accuracy: 75.42%
+   ⏱️  Time: 2m 47s
+
+📚 Epoch 5/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.4940
+   Batch 200/782 - Loss: 0.6045
+   Batch 300/782 - Loss: 0.6908
+   Batch 400/782 - Loss: 0.6314
+   Batch 500/782 - Loss: 0.4101
+   Batch 600/782 - Loss: 0.4377
+   Batch 700/782 - Loss: 0.3657
+
+   ✅ Train Loss: 0.4463
+   ✅ Test Loss: 0.5653
+   ✅ Test Accuracy: 75.81%
+   ⏱️  Time: 2m 51s
+
+======================================================================
+🎉 Training Complete!
+⏱️  Total Time: 15m 6s
+⏱️  Average Time per Epoch: 3m 1s
+🎯 Final Test Accuracy: 75.81%
+======================================================================
+
+
+📊 Evaluating model...
+📊 Calculating detailed metrics...
+✅ Accuracy: 75.81%
+✅ F1-Score: 0.7580
+🎨 Creating training history plots...
+💾 Saved training history to results/plots/lstm_tanh_adam_seq50_clip1.0_history.png
+🎨 Creating confusion matrix...
+💾 Saved confusion matrix to results/plots/lstm_tanh_adam_seq50_clip1.0_confusion.png
+💾 Saving results to results/metrics.csv...
+✅ Results saved successfully!
+
+✅ Experiment completed successfully!
+🎯 Final Accuracy: 75.81%
+🎯 F1-Score: 0.7580
+⏱️  Total Time: 15m 6s
+
+======================================================================
+📊 EXPERIMENT SET 3: Testing Different Optimizers
+======================================================================
+
+🔬 Experiment 7: ADAM optimizer
+
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+🚀 STARTING NEW EXPERIMENT
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+📋 Configuration:
+   vocab_size: 10000
+   embedding_dim: 100
+   hidden_dim: 64
+   output_dim: 1
+   n_layers: 2
+   dropout: 0.3
+   batch_size: 32
+   n_epochs: 5
+   learning_rate: 0.001
+   architecture: lstm
+   activation: tanh
+   optimizer: adam
+   sequence_length: 50
+   gradient_clipping: 1.0
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+
+🌱 Random seed set to 42 - Results will be the same every time!
+🐢 Using CPU (this will be slower, but it works!)
+
+📚 Loading and preprocessing data...
+📂 Loading movie reviews from data folder...
+✅ Loaded 25000 training reviews
+✅ Loaded 25000 testing reviews
+✂️ Preparing reviews with length 50 words...
+📊 Average review length (before padding):
+   Training: 238.7 words
+   Testing: 230.8 words
+📏 After padding/truncating: 50 words
+✅ Preprocessing complete!
+📦 Creating data batches of size 32...
+✅ Created 782 training batches
+✅ Created 782 testing batches
+
+🤖 Creating LSTM model...
+
+🎯 Creating a LSTM model...
+🏗️ Building LSTM with tanh activation...
+✅ LSTM built successfully!
+🔢 Total parameters: 1,075,841
+🎓 Trainable parameters: 1,075,841
+🎓 Setting up ADAM optimizer with learning rate 0.001...
+
+🏋️‍♂️ Starting training...
+
+======================================================================
+🚀 Starting training for 5 epochs...
+======================================================================
+
+📚 Epoch 1/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6833
+   Batch 200/782 - Loss: 0.7005
+   Batch 300/782 - Loss: 0.6972
+   Batch 400/782 - Loss: 0.7015
+   Batch 500/782 - Loss: 0.6891
+   Batch 600/782 - Loss: 0.6875
+   Batch 700/782 - Loss: 0.6405
+
+   ✅ Train Loss: 0.6861
+   ✅ Test Loss: 0.6633
+   ✅ Test Accuracy: 62.62%
+   ⏱️  Time: 3m 1s
+
+📚 Epoch 2/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6376
+   Batch 200/782 - Loss: 0.6031
+   Batch 300/782 - Loss: 0.6162
+   Batch 400/782 - Loss: 0.6526
+   Batch 500/782 - Loss: 0.6046
+   Batch 600/782 - Loss: 0.5850
+   Batch 700/782 - Loss: 0.6132
+
+   ✅ Train Loss: 0.6189
+   ✅ Test Loss: 0.5813
+   ✅ Test Accuracy: 70.72%
+   ⏱️  Time: 2m 56s
+
+📚 Epoch 3/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.4764
+   Batch 200/782 - Loss: 0.6011
+   Batch 300/782 - Loss: 0.3160
+   Batch 400/782 - Loss: 0.5183
+   Batch 500/782 - Loss: 0.5336
+   Batch 600/782 - Loss: 0.5635
+   Batch 700/782 - Loss: 0.5645
+
+   ✅ Train Loss: 0.5395
+   ✅ Test Loss: 0.5388
+   ✅ Test Accuracy: 73.72%
+   ⏱️  Time: 2m 43s
+
+📚 Epoch 4/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.5234
+   Batch 200/782 - Loss: 0.3206
+   Batch 300/782 - Loss: 0.5056
+   Batch 400/782 - Loss: 0.3086
+   Batch 500/782 - Loss: 0.6202
+   Batch 600/782 - Loss: 0.3605
+   Batch 700/782 - Loss: 0.2936
+
+   ✅ Train Loss: 0.4896
+   ✅ Test Loss: 0.5243
+   ✅ Test Accuracy: 75.42%
+   ⏱️  Time: 2m 36s
+
+📚 Epoch 5/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.4940
+   Batch 200/782 - Loss: 0.6045
+   Batch 300/782 - Loss: 0.6908
+   Batch 400/782 - Loss: 0.6314
+   Batch 500/782 - Loss: 0.4101
+   Batch 600/782 - Loss: 0.4377
+   Batch 700/782 - Loss: 0.3657
+
+   ✅ Train Loss: 0.4463
+   ✅ Test Loss: 0.5653
+   ✅ Test Accuracy: 75.81%
+   ⏱️  Time: 2m 27s
+
+======================================================================
+🎉 Training Complete!
+⏱️  Total Time: 13m 45s
+⏱️  Average Time per Epoch: 2m 45s
+🎯 Final Test Accuracy: 75.81%
+======================================================================
+
+
+📊 Evaluating model...
+📊 Calculating detailed metrics...
+✅ Accuracy: 75.81%
+✅ F1-Score: 0.7580
+🎨 Creating training history plots...
+💾 Saved training history to results/plots/lstm_tanh_adam_seq50_clip1.0_history.png
+🎨 Creating confusion matrix...
+💾 Saved confusion matrix to results/plots/lstm_tanh_adam_seq50_clip1.0_confusion.png
+💾 Saving results to results/metrics.csv...
+✅ Results saved successfully!
+
+✅ Experiment completed successfully!
+🎯 Final Accuracy: 75.81%
+🎯 F1-Score: 0.7580
+⏱️  Total Time: 13m 45s
+
+🔬 Experiment 8: SGD optimizer
+
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+🚀 STARTING NEW EXPERIMENT
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+📋 Configuration:
+   vocab_size: 10000
+   embedding_dim: 100
+   hidden_dim: 64
+   output_dim: 1
+   n_layers: 2
+   dropout: 0.3
+   batch_size: 32
+   n_epochs: 5
+   learning_rate: 0.001
+   architecture: lstm
+   activation: tanh
+   optimizer: sgd
+   sequence_length: 50
+   gradient_clipping: 1.0
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+
+🌱 Random seed set to 42 - Results will be the same every time!
+🐢 Using CPU (this will be slower, but it works!)
+
+📚 Loading and preprocessing data...
+📂 Loading movie reviews from data folder...
+✅ Loaded 25000 training reviews
+✅ Loaded 25000 testing reviews
+✂️ Preparing reviews with length 50 words...
+📊 Average review length (before padding):
+   Training: 238.7 words
+   Testing: 230.8 words
+📏 After padding/truncating: 50 words
+✅ Preprocessing complete!
+📦 Creating data batches of size 32...
+✅ Created 782 training batches
+✅ Created 782 testing batches
+
+🤖 Creating LSTM model...
+
+🎯 Creating a LSTM model...
+🏗️ Building LSTM with tanh activation...
+✅ LSTM built successfully!
+🔢 Total parameters: 1,075,841
+🎓 Trainable parameters: 1,075,841
+🎓 Setting up SGD optimizer with learning rate 0.001...
+
+🏋️‍♂️ Starting training...
+
+======================================================================
+🚀 Starting training for 5 epochs...
+======================================================================
+
+📚 Epoch 1/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6940
+   Batch 200/782 - Loss: 0.6969
+   Batch 300/782 - Loss: 0.6918
+   Batch 400/782 - Loss: 0.6912
+   Batch 500/782 - Loss: 0.6980
+   Batch 600/782 - Loss: 0.6900
+   Batch 700/782 - Loss: 0.6898
+
+   ✅ Train Loss: 0.6933
+   ✅ Test Loss: 0.6930
+   ✅ Test Accuracy: 50.50%
+   ⏱️  Time: 2m 4s
+
+📚 Epoch 2/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6924
+   Batch 200/782 - Loss: 0.6898
+   Batch 300/782 - Loss: 0.6921
+   Batch 400/782 - Loss: 0.6902
+   Batch 500/782 - Loss: 0.6910
+   Batch 600/782 - Loss: 0.6968
+   Batch 700/782 - Loss: 0.7015
+
+   ✅ Train Loss: 0.6935
+   ✅ Test Loss: 0.6929
+   ✅ Test Accuracy: 51.03%
+   ⏱️  Time: 1m 52s
+
+📚 Epoch 3/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6927
+   Batch 200/782 - Loss: 0.7009
+   Batch 300/782 - Loss: 0.6920
+   Batch 400/782 - Loss: 0.6978
+   Batch 500/782 - Loss: 0.6912
+   Batch 600/782 - Loss: 0.6947
+   Batch 700/782 - Loss: 0.6918
+
+   ✅ Train Loss: 0.6932
+   ✅ Test Loss: 0.6929
+   ✅ Test Accuracy: 50.61%
+   ⏱️  Time: 2m 32s
+
+📚 Epoch 4/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6879
+   Batch 200/782 - Loss: 0.6972
+   Batch 300/782 - Loss: 0.6966
+   Batch 400/782 - Loss: 0.6963
+   Batch 500/782 - Loss: 0.6941
+   Batch 600/782 - Loss: 0.6959
+   Batch 700/782 - Loss: 0.6928
+
+   ✅ Train Loss: 0.6931
+   ✅ Test Loss: 0.6928
+   ✅ Test Accuracy: 51.72%
+   ⏱️  Time: 2m 21s
+
+📚 Epoch 5/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6887
+   Batch 200/782 - Loss: 0.6906
+   Batch 300/782 - Loss: 0.6903
+   Batch 400/782 - Loss: 0.6943
+   Batch 500/782 - Loss: 0.6918
+   Batch 600/782 - Loss: 0.6903
+   Batch 700/782 - Loss: 0.6934
+
+   ✅ Train Loss: 0.6929
+   ✅ Test Loss: 0.6927
+   ✅ Test Accuracy: 51.72%
+   ⏱️  Time: 2m 33s
+
+======================================================================
+🎉 Training Complete!
+⏱️  Total Time: 11m 25s
+⏱️  Average Time per Epoch: 2m 17s
+🎯 Final Test Accuracy: 51.72%
+======================================================================
+
+
+📊 Evaluating model...
+📊 Calculating detailed metrics...
+✅ Accuracy: 51.72%
+✅ F1-Score: 0.5032
+🎨 Creating training history plots...
+💾 Saved training history to results/plots/lstm_tanh_sgd_seq50_clip1.0_history.png
+🎨 Creating confusion matrix...
+💾 Saved confusion matrix to results/plots/lstm_tanh_sgd_seq50_clip1.0_confusion.png
+💾 Saving results to results/metrics.csv...
+✅ Results saved successfully!
+
+✅ Experiment completed successfully!
+🎯 Final Accuracy: 51.72%
+🎯 F1-Score: 0.5032
+⏱️  Total Time: 11m 25s
+
+🔬 Experiment 9: RMSPROP optimizer
+
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+🚀 STARTING NEW EXPERIMENT
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+📋 Configuration:
+   vocab_size: 10000
+   embedding_dim: 100
+   hidden_dim: 64
+   output_dim: 1
+   n_layers: 2
+   dropout: 0.3
+   batch_size: 32
+   n_epochs: 5
+   learning_rate: 0.001
+   architecture: lstm
+   activation: tanh
+   optimizer: rmsprop
+   sequence_length: 50
+   gradient_clipping: 1.0
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+
+🌱 Random seed set to 42 - Results will be the same every time!
+🐢 Using CPU (this will be slower, but it works!)
+
+📚 Loading and preprocessing data...
+📂 Loading movie reviews from data folder...
+✅ Loaded 25000 training reviews
+✅ Loaded 25000 testing reviews
+✂️ Preparing reviews with length 50 words...
+📊 Average review length (before padding):
+   Training: 238.7 words
+   Testing: 230.8 words
+📏 After padding/truncating: 50 words
+✅ Preprocessing complete!
+📦 Creating data batches of size 32...
+✅ Created 782 training batches
+✅ Created 782 testing batches
+
+🤖 Creating LSTM model...
+
+🎯 Creating a LSTM model...
+🏗️ Building LSTM with tanh activation...
+✅ LSTM built successfully!
+🔢 Total parameters: 1,075,841
+🎓 Trainable parameters: 1,075,841
+🎓 Setting up RMSPROP optimizer with learning rate 0.001...
+
+🏋️‍♂️ Starting training...
+
+======================================================================
+🚀 Starting training for 5 epochs...
+======================================================================
+
+📚 Epoch 1/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6710
+   Batch 200/782 - Loss: 0.7055
+   Batch 300/782 - Loss: 0.7011
+   Batch 400/782 - Loss: 0.6485
+   Batch 500/782 - Loss: 0.7223
+   Batch 600/782 - Loss: 0.6991
+   Batch 700/782 - Loss: 0.6452
+
+   ✅ Train Loss: 0.6746
+   ✅ Test Loss: 0.6482
+   ✅ Test Accuracy: 64.09%
+   ⏱️  Time: 2m 38s
+
+📚 Epoch 2/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6160
+   Batch 200/782 - Loss: 0.5511
+   Batch 300/782 - Loss: 0.5651
+   Batch 400/782 - Loss: 0.6009
+   Batch 500/782 - Loss: 0.5149
+   Batch 600/782 - Loss: 0.6397
+   Batch 700/782 - Loss: 0.6325
+
+   ✅ Train Loss: 0.6020
+   ✅ Test Loss: 0.5800
+   ✅ Test Accuracy: 71.23%
+   ⏱️  Time: 2m 38s
+
+📚 Epoch 3/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.4588
+   Batch 200/782 - Loss: 0.5827
+   Batch 300/782 - Loss: 0.4081
+   Batch 400/782 - Loss: 0.7131
+   Batch 500/782 - Loss: 0.5014
+   Batch 600/782 - Loss: 0.4968
+   Batch 700/782 - Loss: 0.4622
+
+   ✅ Train Loss: 0.5408
+   ✅ Test Loss: 0.5309
+   ✅ Test Accuracy: 73.76%
+   ⏱️  Time: 2m 32s
+
+📚 Epoch 4/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.4477
+   Batch 200/782 - Loss: 0.3440
+   Batch 300/782 - Loss: 0.4386
+   Batch 400/782 - Loss: 0.3188
+   Batch 500/782 - Loss: 0.7360
+   Batch 600/782 - Loss: 0.4565
+   Batch 700/782 - Loss: 0.4371
+
+   ✅ Train Loss: 0.4962
+   ✅ Test Loss: 0.5309
+   ✅ Test Accuracy: 75.13%
+   ⏱️  Time: 2m 21s
+
+📚 Epoch 5/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.5134
+   Batch 200/782 - Loss: 0.4688
+   Batch 300/782 - Loss: 0.5757
+   Batch 400/782 - Loss: 0.5662
+   Batch 500/782 - Loss: 0.4023
+   Batch 600/782 - Loss: 0.5212
+   Batch 700/782 - Loss: 0.4153
+
+   ✅ Train Loss: 0.4649
+   ✅ Test Loss: 0.5235
+   ✅ Test Accuracy: 76.04%
+   ⏱️  Time: 2m 18s
+
+======================================================================
+🎉 Training Complete!
+⏱️  Total Time: 12m 28s
+⏱️  Average Time per Epoch: 2m 29s
+🎯 Final Test Accuracy: 76.04%
+======================================================================
+
+
+📊 Evaluating model...
+📊 Calculating detailed metrics...
+✅ Accuracy: 76.04%
+✅ F1-Score: 0.7603
+🎨 Creating training history plots...
+💾 Saved training history to results/plots/lstm_tanh_rmsprop_seq50_clip1.0_history.png
+🎨 Creating confusion matrix...
+💾 Saved confusion matrix to results/plots/lstm_tanh_rmsprop_seq50_clip1.0_confusion.png
+💾 Saving results to results/metrics.csv...
+✅ Results saved successfully!
+
+✅ Experiment completed successfully!
+🎯 Final Accuracy: 76.04%
+🎯 F1-Score: 0.7603
+⏱️  Total Time: 12m 28s
+
+======================================================================
+📊 EXPERIMENT SET 4: Testing Different Sequence Lengths
+======================================================================
+
+🔬 Experiment 10: Sequence length 25
+
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+🚀 STARTING NEW EXPERIMENT
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+📋 Configuration:
+   vocab_size: 10000
+   embedding_dim: 100
+   hidden_dim: 64
+   output_dim: 1
+   n_layers: 2
+   dropout: 0.3
+   batch_size: 32
+   n_epochs: 5
+   learning_rate: 0.001
+   architecture: lstm
+   activation: tanh
+   optimizer: adam
+   sequence_length: 25
+   gradient_clipping: 1.0
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+
+🌱 Random seed set to 42 - Results will be the same every time!
+🐢 Using CPU (this will be slower, but it works!)
+
+📚 Loading and preprocessing data...
+📂 Loading movie reviews from data folder...
+✅ Loaded 25000 training reviews
+✅ Loaded 25000 testing reviews
+✂️ Preparing reviews with length 25 words...
+📊 Average review length (before padding):
+   Training: 238.7 words
+   Testing: 230.8 words
+📏 After padding/truncating: 25 words
+✅ Preprocessing complete!
+📦 Creating data batches of size 32...
+✅ Created 782 training batches
+✅ Created 782 testing batches
+
+🤖 Creating LSTM model...
+
+🎯 Creating a LSTM model...
+🏗️ Building LSTM with tanh activation...
+✅ LSTM built successfully!
+🔢 Total parameters: 1,075,841
+🎓 Trainable parameters: 1,075,841
+🎓 Setting up ADAM optimizer with learning rate 0.001...
+
+🏋️‍♂️ Starting training...
+
+======================================================================
+🚀 Starting training for 5 epochs...
+======================================================================
+
+📚 Epoch 1/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6857
+   Batch 200/782 - Loss: 0.6552
+   Batch 300/782 - Loss: 0.6834
+   Batch 400/782 - Loss: 0.6617
+   Batch 500/782 - Loss: 0.6460
+   Batch 600/782 - Loss: 0.6259
+   Batch 700/782 - Loss: 0.6065
+
+   ✅ Train Loss: 0.6675
+   ✅ Test Loss: 0.6305
+   ✅ Test Accuracy: 64.43%
+   ⏱️  Time: 1m 6s
+
+📚 Epoch 2/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.5206
+   Batch 200/782 - Loss: 0.6509
+   Batch 300/782 - Loss: 0.5591
+   Batch 400/782 - Loss: 0.7007
+   Batch 500/782 - Loss: 0.6106
+   Batch 600/782 - Loss: 0.6411
+   Batch 700/782 - Loss: 0.5359
+
+   ✅ Train Loss: 0.6006
+   ✅ Test Loss: 0.5818
+   ✅ Test Accuracy: 68.15%
+   ⏱️  Time: 1m 13s
+
+📚 Epoch 3/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.4572
+   Batch 200/782 - Loss: 0.5814
+   Batch 300/782 - Loss: 0.5155
+   Batch 400/782 - Loss: 0.4616
+   Batch 500/782 - Loss: 0.4680
+   Batch 600/782 - Loss: 0.6950
+   Batch 700/782 - Loss: 0.4428
+
+   ✅ Train Loss: 0.5477
+   ✅ Test Loss: 0.5874
+   ✅ Test Accuracy: 70.28%
+   ⏱️  Time: 1m 29s
+
+📚 Epoch 4/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.5225
+   Batch 200/782 - Loss: 0.6489
+   Batch 300/782 - Loss: 0.5024
+   Batch 400/782 - Loss: 0.5641
+   Batch 500/782 - Loss: 0.6123
+   Batch 600/782 - Loss: 0.5490
+   Batch 700/782 - Loss: 0.4215
+
+   ✅ Train Loss: 0.5090
+   ✅ Test Loss: 0.6008
+   ✅ Test Accuracy: 70.90%
+   ⏱️  Time: 1m 23s
+
+📚 Epoch 5/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.4270
+   Batch 200/782 - Loss: 0.4295
+   Batch 300/782 - Loss: 0.3875
+   Batch 400/782 - Loss: 0.4315
+   Batch 500/782 - Loss: 0.4276
+   Batch 600/782 - Loss: 0.4367
+   Batch 700/782 - Loss: 0.5793
+
+   ✅ Train Loss: 0.4774
+   ✅ Test Loss: 0.5708
+   ✅ Test Accuracy: 71.09%
+   ⏱️  Time: 1m 31s
+
+======================================================================
+🎉 Training Complete!
+⏱️  Total Time: 6m 44s
+⏱️  Average Time per Epoch: 1m 20s
+🎯 Final Test Accuracy: 71.09%
+======================================================================
+
+
+📊 Evaluating model...
+📊 Calculating detailed metrics...
+✅ Accuracy: 71.09%
+✅ F1-Score: 0.7108
+🎨 Creating training history plots...
+💾 Saved training history to results/plots/lstm_tanh_adam_seq25_clip1.0_history.png
+🎨 Creating confusion matrix...
+💾 Saved confusion matrix to results/plots/lstm_tanh_adam_seq25_clip1.0_confusion.png
+💾 Saving results to results/metrics.csv...
+✅ Results saved successfully!
+
+✅ Experiment completed successfully!
+🎯 Final Accuracy: 71.09%
+🎯 F1-Score: 0.7108
+⏱️  Total Time: 6m 44s
+
+🔬 Experiment 11: Sequence length 50
+
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+🚀 STARTING NEW EXPERIMENT
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+📋 Configuration:
+   vocab_size: 10000
+   embedding_dim: 100
+   hidden_dim: 64
+   output_dim: 1
+   n_layers: 2
+   dropout: 0.3
+   batch_size: 32
+   n_epochs: 5
+   learning_rate: 0.001
+   architecture: lstm
+   activation: tanh
+   optimizer: adam
+   sequence_length: 50
+   gradient_clipping: 1.0
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+
+🌱 Random seed set to 42 - Results will be the same every time!
+🐢 Using CPU (this will be slower, but it works!)
+
+📚 Loading and preprocessing data...
+📂 Loading movie reviews from data folder...
+✅ Loaded 25000 training reviews
+✅ Loaded 25000 testing reviews
+✂️ Preparing reviews with length 50 words...
+📊 Average review length (before padding):
+   Training: 238.7 words
+   Testing: 230.8 words
+📏 After padding/truncating: 50 words
+✅ Preprocessing complete!
+📦 Creating data batches of size 32...
+✅ Created 782 training batches
+✅ Created 782 testing batches
+
+🤖 Creating LSTM model...
+
+🎯 Creating a LSTM model...
+🏗️ Building LSTM with tanh activation...
+✅ LSTM built successfully!
+🔢 Total parameters: 1,075,841
+🎓 Trainable parameters: 1,075,841
+🎓 Setting up ADAM optimizer with learning rate 0.001...
+
+🏋️‍♂️ Starting training...
+
+======================================================================
+🚀 Starting training for 5 epochs...
+======================================================================
+
+📚 Epoch 1/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6833
+   Batch 200/782 - Loss: 0.7005
+   Batch 300/782 - Loss: 0.6972
+   Batch 400/782 - Loss: 0.7015
+   Batch 500/782 - Loss: 0.6891
+   Batch 600/782 - Loss: 0.6875
+   Batch 700/782 - Loss: 0.6405
+
+   ✅ Train Loss: 0.6861
+   ✅ Test Loss: 0.6633
+   ✅ Test Accuracy: 62.62%
+   ⏱️  Time: 2m 14s
+
+📚 Epoch 2/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6376
+   Batch 200/782 - Loss: 0.6031
+   Batch 300/782 - Loss: 0.6162
+   Batch 400/782 - Loss: 0.6526
+   Batch 500/782 - Loss: 0.6046
+   Batch 600/782 - Loss: 0.5850
+   Batch 700/782 - Loss: 0.6132
+
+   ✅ Train Loss: 0.6189
+   ✅ Test Loss: 0.5813
+   ✅ Test Accuracy: 70.72%
+   ⏱️  Time: 1m 59s
+
+📚 Epoch 3/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.4764
+   Batch 200/782 - Loss: 0.6011
+   Batch 300/782 - Loss: 0.3160
+   Batch 400/782 - Loss: 0.5183
+   Batch 500/782 - Loss: 0.5336
+   Batch 600/782 - Loss: 0.5635
+   Batch 700/782 - Loss: 0.5645
+
+   ✅ Train Loss: 0.5395
+   ✅ Test Loss: 0.5388
+   ✅ Test Accuracy: 73.72%
+   ⏱️  Time: 2m 16s
+
+📚 Epoch 4/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.5234
+   Batch 200/782 - Loss: 0.3206
+   Batch 300/782 - Loss: 0.5056
+   Batch 400/782 - Loss: 0.3086
+   Batch 500/782 - Loss: 0.6202
+   Batch 600/782 - Loss: 0.3605
+   Batch 700/782 - Loss: 0.2936
+
+   ✅ Train Loss: 0.4896
+   ✅ Test Loss: 0.5243
+   ✅ Test Accuracy: 75.42%
+   ⏱️  Time: 2m 8s
+
+📚 Epoch 5/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.4940
+   Batch 200/782 - Loss: 0.6045
+   Batch 300/782 - Loss: 0.6908
+   Batch 400/782 - Loss: 0.6314
+   Batch 500/782 - Loss: 0.4101
+   Batch 600/782 - Loss: 0.4377
+   Batch 700/782 - Loss: 0.3657
+
+   ✅ Train Loss: 0.4463
+   ✅ Test Loss: 0.5653
+   ✅ Test Accuracy: 75.81%
+   ⏱️  Time: 2m 21s
+
+======================================================================
+🎉 Training Complete!
+⏱️  Total Time: 10m 59s
+⏱️  Average Time per Epoch: 2m 11s
+🎯 Final Test Accuracy: 75.81%
+======================================================================
+
+
+📊 Evaluating model...
+📊 Calculating detailed metrics...
+✅ Accuracy: 75.81%
+✅ F1-Score: 0.7580
+🎨 Creating training history plots...
+💾 Saved training history to results/plots/lstm_tanh_adam_seq50_clip1.0_history.png
+🎨 Creating confusion matrix...
+💾 Saved confusion matrix to results/plots/lstm_tanh_adam_seq50_clip1.0_confusion.png
+💾 Saving results to results/metrics.csv...
+✅ Results saved successfully!
+
+✅ Experiment completed successfully!
+🎯 Final Accuracy: 75.81%
+🎯 F1-Score: 0.7580
+⏱️  Total Time: 10m 59s
+
+🔬 Experiment 12: Sequence length 100
+
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+🚀 STARTING NEW EXPERIMENT
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+📋 Configuration:
+   vocab_size: 10000
+   embedding_dim: 100
+   hidden_dim: 64
+   output_dim: 1
+   n_layers: 2
+   dropout: 0.3
+   batch_size: 32
+   n_epochs: 5
+   learning_rate: 0.001
+   architecture: lstm
+   activation: tanh
+   optimizer: adam
+   sequence_length: 100
+   gradient_clipping: 1.0
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+
+🌱 Random seed set to 42 - Results will be the same every time!
+🐢 Using CPU (this will be slower, but it works!)
+
+📚 Loading and preprocessing data...
+📂 Loading movie reviews from data folder...
+✅ Loaded 25000 training reviews
+✅ Loaded 25000 testing reviews
+✂️ Preparing reviews with length 100 words...
+📊 Average review length (before padding):
+   Training: 238.7 words
+   Testing: 230.8 words
+📏 After padding/truncating: 100 words
+✅ Preprocessing complete!
+📦 Creating data batches of size 32...
+✅ Created 782 training batches
+✅ Created 782 testing batches
+
+🤖 Creating LSTM model...
+
+🎯 Creating a LSTM model...
+🏗️ Building LSTM with tanh activation...
+✅ LSTM built successfully!
+🔢 Total parameters: 1,075,841
+🎓 Trainable parameters: 1,075,841
+🎓 Setting up ADAM optimizer with learning rate 0.001...
+
+🏋️‍♂️ Starting training...
+
+======================================================================
+🚀 Starting training for 5 epochs...
+======================================================================
+
+📚 Epoch 1/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6930
+   Batch 200/782 - Loss: 0.6775
+   Batch 300/782 - Loss: 0.7112
+   Batch 400/782 - Loss: 0.7028
+   Batch 500/782 - Loss: 0.7525
+   Batch 600/782 - Loss: 0.6698
+   Batch 700/782 - Loss: 0.7796
+
+   ✅ Train Loss: 0.6801
+   ✅ Test Loss: 0.6693
+   ✅ Test Accuracy: 59.29%
+   ⏱️  Time: 2m 43s
+
+📚 Epoch 2/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6111
+   Batch 200/782 - Loss: 0.5763
+   Batch 300/782 - Loss: 0.6984
+   Batch 400/782 - Loss: 0.6753
+   Batch 500/782 - Loss: 0.5956
+   Batch 600/782 - Loss: 0.6026
+   Batch 700/782 - Loss: 0.5511
+
+   ✅ Train Loss: 0.6050
+   ✅ Test Loss: 0.6088
+   ✅ Test Accuracy: 70.96%
+   ⏱️  Time: 3m 31s
+
+📚 Epoch 3/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6753
+   Batch 200/782 - Loss: 0.6491
+   Batch 300/782 - Loss: 0.6432
+   Batch 400/782 - Loss: 0.4931
+   Batch 500/782 - Loss: 0.4244
+   Batch 600/782 - Loss: 0.4642
+   Batch 700/782 - Loss: 0.4479
+
+   ✅ Train Loss: 0.5251
+   ✅ Test Loss: 0.5197
+   ✅ Test Accuracy: 77.06%
+   ⏱️  Time: 3m 48s
+
+📚 Epoch 4/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.5826
+   Batch 200/782 - Loss: 0.4869
+   Batch 300/782 - Loss: 0.5200
+   Batch 400/782 - Loss: 0.5355
+   Batch 500/782 - Loss: 0.4856
+   Batch 600/782 - Loss: 0.4847
+   Batch 700/782 - Loss: 0.4279
+
+   ✅ Train Loss: 0.4701
+   ✅ Test Loss: 0.4801
+   ✅ Test Accuracy: 79.01%
+   ⏱️  Time: 3m 26s
+
+📚 Epoch 5/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6032
+   Batch 200/782 - Loss: 0.5247
+   Batch 300/782 - Loss: 0.6027
+   Batch 400/782 - Loss: 0.2751
+   Batch 500/782 - Loss: 0.4729
+   Batch 600/782 - Loss: 0.4910
+   Batch 700/782 - Loss: 0.3696
+
+   ✅ Train Loss: 0.4197
+   ✅ Test Loss: 0.5181
+   ✅ Test Accuracy: 79.54%
+   ⏱️  Time: 3m 15s
+
+======================================================================
+🎉 Training Complete!
+⏱️  Total Time: 16m 45s
+⏱️  Average Time per Epoch: 3m 21s
+🎯 Final Test Accuracy: 79.54%
+======================================================================
+
+
+📊 Evaluating model...
+📊 Calculating detailed metrics...
+✅ Accuracy: 79.54%
+✅ F1-Score: 0.7944
+🎨 Creating training history plots...
+💾 Saved training history to results/plots/lstm_tanh_adam_seq100_clip1.0_history.png
+🎨 Creating confusion matrix...
+💾 Saved confusion matrix to results/plots/lstm_tanh_adam_seq100_clip1.0_confusion.png
+💾 Saving results to results/metrics.csv...
+✅ Results saved successfully!
+
+✅ Experiment completed successfully!
+🎯 Final Accuracy: 79.54%
+🎯 F1-Score: 0.7944
+⏱️  Total Time: 16m 45s
+
+======================================================================
+📊 EXPERIMENT SET 5: Testing Gradient Clipping
+======================================================================
+
+🔬 Experiment 13: No Clipping
+
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+🚀 STARTING NEW EXPERIMENT
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+📋 Configuration:
+   vocab_size: 10000
+   embedding_dim: 100
+   hidden_dim: 64
+   output_dim: 1
+   n_layers: 2
+   dropout: 0.3
+   batch_size: 32
+   n_epochs: 5
+   learning_rate: 0.001
+   architecture: lstm
+   activation: tanh
+   optimizer: adam
+   sequence_length: 50
+   gradient_clipping: None
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+
+🌱 Random seed set to 42 - Results will be the same every time!
+🐢 Using CPU (this will be slower, but it works!)
+
+📚 Loading and preprocessing data...
+📂 Loading movie reviews from data folder...
+✅ Loaded 25000 training reviews
+✅ Loaded 25000 testing reviews
+✂️ Preparing reviews with length 50 words...
+📊 Average review length (before padding):
+   Training: 238.7 words
+   Testing: 230.8 words
+📏 After padding/truncating: 50 words
+✅ Preprocessing complete!
+📦 Creating data batches of size 32...
+✅ Created 782 training batches
+✅ Created 782 testing batches
+
+🤖 Creating LSTM model...
+
+🎯 Creating a LSTM model...
+🏗️ Building LSTM with tanh activation...
+✅ LSTM built successfully!
+🔢 Total parameters: 1,075,841
+🎓 Trainable parameters: 1,075,841
+🎓 Setting up ADAM optimizer with learning rate 0.001...
+
+🏋️‍♂️ Starting training...
+
+======================================================================
+🚀 Starting training for 5 epochs...
+======================================================================
+
+📚 Epoch 1/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6833
+   Batch 200/782 - Loss: 0.7005
+   Batch 300/782 - Loss: 0.8178
+   Batch 400/782 - Loss: 0.7012
+   Batch 500/782 - Loss: 0.6957
+   Batch 600/782 - Loss: 0.6909
+   Batch 700/782 - Loss: 0.6991
+
+   ✅ Train Loss: 0.6887
+   ✅ Test Loss: 0.6940
+   ✅ Test Accuracy: 50.09%
+   ⏱️  Time: 1m 50s
+
+📚 Epoch 2/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.7033
+   Batch 200/782 - Loss: 0.6870
+   Batch 300/782 - Loss: 0.6878
+   Batch 400/782 - Loss: 0.6844
+   Batch 500/782 - Loss: 0.6930
+   Batch 600/782 - Loss: 0.6936
+   Batch 700/782 - Loss: 0.6682
+
+   ✅ Train Loss: 0.6901
+   ✅ Test Loss: 0.6533
+   ✅ Test Accuracy: 62.01%
+   ⏱️  Time: 1m 54s
+
+📚 Epoch 3/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6498
+   Batch 200/782 - Loss: 0.5854
+   Batch 300/782 - Loss: 0.6033
+   Batch 400/782 - Loss: 0.6282
+   Batch 500/782 - Loss: 0.6028
+   Batch 600/782 - Loss: 0.6501
+   Batch 700/782 - Loss: 0.5219
+
+   ✅ Train Loss: 0.6260
+   ✅ Test Loss: 0.5890
+   ✅ Test Accuracy: 69.49%
+   ⏱️  Time: 1m 10s
+
+📚 Epoch 4/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6299
+   Batch 200/782 - Loss: 0.4372
+   Batch 300/782 - Loss: 0.5781
+   Batch 400/782 - Loss: 0.4314
+   Batch 500/782 - Loss: 0.6851
+   Batch 600/782 - Loss: 0.4026
+   Batch 700/782 - Loss: 0.3341
+
+   ✅ Train Loss: 0.5329
+   ✅ Test Loss: 0.5229
+   ✅ Test Accuracy: 74.46%
+   ⏱️  Time: 1m 5s
+
+📚 Epoch 5/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6556
+   Batch 200/782 - Loss: 0.5709
+   Batch 300/782 - Loss: 0.6196
+   Batch 400/782 - Loss: 0.7051
+   Batch 500/782 - Loss: 0.5167
+   Batch 600/782 - Loss: 0.4826
+   Batch 700/782 - Loss: 0.4188
+
+   ✅ Train Loss: 0.4790
+   ✅ Test Loss: 0.5008
+   ✅ Test Accuracy: 75.47%
+   ⏱️  Time: 1m 4s
+
+======================================================================
+🎉 Training Complete!
+⏱️  Total Time: 7m 4s
+⏱️  Average Time per Epoch: 1m 24s
+🎯 Final Test Accuracy: 75.47%
+======================================================================
+
+
+📊 Evaluating model...
+📊 Calculating detailed metrics...
+✅ Accuracy: 75.47%
+✅ F1-Score: 0.7544
+🎨 Creating training history plots...
+💾 Saved training history to results/plots/lstm_tanh_adam_seq50_clipNone_history.png
+🎨 Creating confusion matrix...
+💾 Saved confusion matrix to results/plots/lstm_tanh_adam_seq50_clipNone_confusion.png
+💾 Saving results to results/metrics.csv...
+✅ Results saved successfully!
+
+✅ Experiment completed successfully!
+🎯 Final Accuracy: 75.47%
+🎯 F1-Score: 0.7544
+⏱️  Total Time: 7m 4s
+
+🔬 Experiment 14: Clipping=1.0
+
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+🚀 STARTING NEW EXPERIMENT
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+📋 Configuration:
+   vocab_size: 10000
+   embedding_dim: 100
+   hidden_dim: 64
+   output_dim: 1
+   n_layers: 2
+   dropout: 0.3
+   batch_size: 32
+   n_epochs: 5
+   learning_rate: 0.001
+   architecture: lstm
+   activation: tanh
+   optimizer: adam
+   sequence_length: 50
+   gradient_clipping: 1.0
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+
+🌱 Random seed set to 42 - Results will be the same every time!
+🐢 Using CPU (this will be slower, but it works!)
+
+📚 Loading and preprocessing data...
+📂 Loading movie reviews from data folder...
+✅ Loaded 25000 training reviews
+✅ Loaded 25000 testing reviews
+✂️ Preparing reviews with length 50 words...
+📊 Average review length (before padding):
+   Training: 238.7 words
+   Testing: 230.8 words
+📏 After padding/truncating: 50 words
+✅ Preprocessing complete!
+📦 Creating data batches of size 32...
+✅ Created 782 training batches
+✅ Created 782 testing batches
+
+🤖 Creating LSTM model...
+
+🎯 Creating a LSTM model...
+🏗️ Building LSTM with tanh activation...
+✅ LSTM built successfully!
+🔢 Total parameters: 1,075,841
+🎓 Trainable parameters: 1,075,841
+🎓 Setting up ADAM optimizer with learning rate 0.001...
+
+🏋️‍♂️ Starting training...
+
+======================================================================
+🚀 Starting training for 5 epochs...
+======================================================================
+
+📚 Epoch 1/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6833
+   Batch 200/782 - Loss: 0.7005
+   Batch 300/782 - Loss: 0.6972
+   Batch 400/782 - Loss: 0.7015
+   Batch 500/782 - Loss: 0.6891
+   Batch 600/782 - Loss: 0.6875
+   Batch 700/782 - Loss: 0.6405
+
+   ✅ Train Loss: 0.6861
+   ✅ Test Loss: 0.6633
+   ✅ Test Accuracy: 62.62%
+   ⏱️  Time: 1m 51s
+
+📚 Epoch 2/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.6376
+   Batch 200/782 - Loss: 0.6031
+   Batch 300/782 - Loss: 0.6162
+   Batch 400/782 - Loss: 0.6526
+   Batch 500/782 - Loss: 0.6046
+   Batch 600/782 - Loss: 0.5850
+   Batch 700/782 - Loss: 0.6132
+
+   ✅ Train Loss: 0.6189
+   ✅ Test Loss: 0.5813
+   ✅ Test Accuracy: 70.72%
+   ⏱️  Time: 1m 58s
+
+📚 Epoch 3/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.4764
+   Batch 200/782 - Loss: 0.6011
+   Batch 300/782 - Loss: 0.3160
+   Batch 400/782 - Loss: 0.5183
+   Batch 500/782 - Loss: 0.5336
+   Batch 600/782 - Loss: 0.5635
+   Batch 700/782 - Loss: 0.5645
+
+   ✅ Train Loss: 0.5395
+   ✅ Test Loss: 0.5388
+   ✅ Test Accuracy: 73.72%
+   ⏱️  Time: 2m 0s
+
+📚 Epoch 4/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.5234
+   Batch 200/782 - Loss: 0.3206
+   Batch 300/782 - Loss: 0.5056
+   Batch 400/782 - Loss: 0.3086
+   Batch 500/782 - Loss: 0.6202
+   Batch 600/782 - Loss: 0.3605
+   Batch 700/782 - Loss: 0.2936
+
+   ✅ Train Loss: 0.4896
+   ✅ Test Loss: 0.5243
+   ✅ Test Accuracy: 75.42%
+   ⏱️  Time: 2m 2s
+
+📚 Epoch 5/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.4940
+   Batch 200/782 - Loss: 0.6045
+   Batch 300/782 - Loss: 0.6908
+   Batch 400/782 - Loss: 0.6314
+   Batch 500/782 - Loss: 0.4101
+   Batch 600/782 - Loss: 0.4377
+   Batch 700/782 - Loss: 0.3657
+
+   ✅ Train Loss: 0.4463
+   ✅ Test Loss: 0.5653
+   ✅ Test Accuracy: 75.81%
+   ⏱️  Time: 1m 30s
+
+======================================================================
+🎉 Training Complete!
+⏱️  Total Time: 9m 24s
+⏱️  Average Time per Epoch: 1m 52s
+🎯 Final Test Accuracy: 75.81%
+======================================================================
+
+
+📊 Evaluating model...
+📊 Calculating detailed metrics...
+✅ Accuracy: 75.81%
+✅ F1-Score: 0.7580
+🎨 Creating training history plots...
+💾 Saved training history to results/plots/lstm_tanh_adam_seq50_clip1.0_history.png
+🎨 Creating confusion matrix...
+💾 Saved confusion matrix to results/plots/lstm_tanh_adam_seq50_clip1.0_confusion.png
+💾 Saving results to results/metrics.csv...
+✅ Results saved successfully!
+
+✅ Experiment completed successfully!
+🎯 Final Accuracy: 75.81%
+🎯 F1-Score: 0.7580
+⏱️  Total Time: 9m 24s
+
+🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊
+🎉 ALL EXPERIMENTS COMPLETED!
+🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊🎊
+
+✅ Total experiments run: 14
+📁 Results saved to: results/metrics.csv
+📊 Plots saved to: results/plots/
+
+🌟 AMAZING JOB! YOU DID IT! 🌟
+
+
+C:\Users\srava\Downloads\sentiment-analysis-project\src>d ..
+'d' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\srava\Downloads\sentiment-analysis-project\src>python src/create_final_plots.py
+python: can't open file 'C:\\Users\\srava\\Downloads\\sentiment-analysis-project\\src\\src\\create_final_plots.py': [Errno 2] No such file or directory
+
+C:\Users\srava\Downloads\sentiment-analysis-project\src>cd..
+
+C:\Users\srava\Downloads\sentiment-analysis-project>create_final_plots.py
+'create_final_plots.py' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\srava\Downloads\sentiment-analysis-project>cd src
+
+C:\Users\srava\Downloads\sentiment-analysis-project\src>python create_final_plots.py
+Traceback (most recent call last):
+  File "C:\Users\srava\Downloads\sentiment-analysis-project\src\create_final_plots.py", line 14, in <module>
+    df = pd.read_csv('../results/metrics.csv')
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\parsers\readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\parsers\readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\parsers\readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\parsers\readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '../results/metrics.csv'
+
+C:\Users\srava\Downloads\sentiment-analysis-project\src>python run_experiments.py
+
+⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
+🎓 SENTIMENT ANALYSIS PROJECT
+🎬 IMDb Movie Review Classification
+⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
+
+
+🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪
+🎉 STARTING ALL EXPERIMENTS!
+🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪🎪
+
+
+======================================================================
+📊 EXPERIMENT SET 1: Testing Different Architectures
+======================================================================
+
+🔬 Experiment 1: RNN
+
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+🚀 STARTING NEW EXPERIMENT
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+📋 Configuration:
+   vocab_size: 10000
+   embedding_dim: 100
+   hidden_dim: 64
+   output_dim: 1
+   n_layers: 2
+   dropout: 0.3
+   batch_size: 32
+   n_epochs: 5
+   learning_rate: 0.001
+   architecture: rnn
+   activation: tanh
+   optimizer: adam
+   sequence_length: 50
+   gradient_clipping: 1.0
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+
+🌱 Random seed set to 42 - Results will be the same every time!
+🐢 Using CPU (this will be slower, but it works!)
+
+📚 Loading and preprocessing data...
+📂 Loading movie reviews from data folder...
+✅ Loaded 25000 training reviews
+✅ Loaded 25000 testing reviews
+✂️ Preparing reviews with length 50 words...
+📊 Average review length (before padding):
+   Training: 238.7 words
+   Testing: 230.8 words
+📏 After padding/truncating: 50 words
+✅ Preprocessing complete!
+📦 Creating data batches of size 32...
+✅ Created 782 training batches
+✅ Created 782 testing batches
+
+🤖 Creating RNN model...
+
+🎯 Creating a RNN model...
+🏗️ Building Simple RNN with tanh activation...
+✅ Simple RNN built successfully!
+🔢 Total parameters: 1,019,009
+🎓 Trainable parameters: 1,019,009
+🎓 Setting up ADAM optimizer with learning rate 0.001...
+
+🏋️‍♂️ Starting training...
+
+======================================================================
+🚀 Starting training for 5 epochs...
+======================================================================
+
+📚 Epoch 1/5
+--------------------------------------------------
+   Batch 100/782 - Loss: 0.7038
+   Batch 200/782 - Loss: 0.7033
+   Batch 300/782 - Loss: 0.7025
+   Batch 400/782 - Loss: 0.6997
+   Batch 500/782 - Loss: 0.6804
+   Batch 600/782 - Loss: 0.7052
+Traceback (most recent call last):
+  File "C:\Users\srava\Downloads\sentiment-analysis-project\src\run_experiments.py", line 289, in <module>
+    run_all_experiments()
+  File "C:\Users\srava\Downloads\sentiment-analysis-project\src\run_experiments.py", line 191, in run_all_experiments
+    results = run_single_experiment(config)
+  File "C:\Users\srava\Downloads\sentiment-analysis-project\src\run_experiments.py", line 84, in run_single_experiment
+    history = train_model(
+  File "C:\Users\srava\Downloads\sentiment-analysis-project\src\train.py", line 197, in train_model
+    train_loss = train_epoch(model, train_loader, optimizer, criterion,
+  File "C:\Users\srava\Downloads\sentiment-analysis-project\src\train.py", line 99, in train_epoch
+    predictions = model(text).squeeze(1)
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\nn\modules\module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\nn\modules\module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\srava\Downloads\sentiment-analysis-project\src\models.py", line 76, in forward
+    output, hidden = self.rnn(embedded)
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\nn\modules\module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\nn\modules\module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\nn\modules\rnn.py", line 721, in forward
+    result = _VF.rnn_tanh(
+KeyboardInterrupt
+^C
+C:\Users\srava\Downloads\sentiment-analysis-project\src>python create_final_plots.py
+Traceback (most recent call last):
+  File "C:\Users\srava\Downloads\sentiment-analysis-project\src\create_final_plots.py", line 14, in <module>
+    df = pd.read_csv('../results/metrics.csv')
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\parsers\readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\parsers\readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\parsers\readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\parsers\readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '../results/metrics.csv'
+
+C:\Users\srava\Downloads\sentiment-analysis-project\src>python create_final_plots.py
+📊 Creating final comparison charts...
+✅ Found metrics file at: results/metrics.csv
+📈 Loaded data with 14 experiments
+📈 Chart 1: Architecture Comparison...
+C:\Users\srava\Downloads\sentiment-analysis-project\src\create_final_plots.py:76: UserWarning: Tight layout not applied. tight_layout cannot make axes width small enough to accommodate all axes decorations
+  plt.tight_layout()
+✅ Saved: architecture_comparison.png
+📈 Chart 2: Optimizer Comparison...
+C:\Users\srava\Downloads\sentiment-analysis-project\src\create_final_plots.py:97: UserWarning: Tight layout not applied. The left and right margins cannot be made large enough to accommodate all axes decorations.
+  plt.tight_layout()
+✅ Saved: optimizer_comparison.png
+📈 Chart 3: Sequence Length Impact...
+✅ Saved: sequence_length_impact.png
+📈 Chart 4: Activation Function Comparison...
+C:\Users\srava\Downloads\sentiment-analysis-project\src\create_final_plots.py:140: UserWarning: Tight layout not applied. The left and right margins cannot be made large enough to accommodate all axes decorations.
+  plt.tight_layout()
+✅ Saved: activation_comparison.png
+📈 Chart 5: Gradient Clipping Comparison...
+Traceback (most recent call last):
+  File "C:\Users\srava\Downloads\sentiment-analysis-project\src\create_final_plots.py", line 156, in <module>
+    bars = ax.bar(labels, values, color=['#E74C3C', '#2ECC71'],
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\matplotlib\__init__.py", line 1461, in inner
+    return func(ax, *map(sanitize_sequence, args), **kwargs)
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\matplotlib\axes\_axes.py", line 2409, in bar
+    x, height, width, y, linewidth, hatch = np.broadcast_arrays(
+  File "<__array_function__ internals>", line 200, in broadcast_arrays
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\numpy\lib\stride_tricks.py", line 540, in broadcast_arrays
+    shape = _broadcast_shape(*args)
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\numpy\lib\stride_tricks.py", line 422, in _broadcast_shape
+    b = np.broadcast(*args[:32])
+ValueError: shape mismatch: objects cannot be broadcast to a single shape.  Mismatch is between arg 0 with shape (2,) and arg 1 with shape (5,).
+
+C:\Users\srava\Downloads\sentiment-analysis-project\src>python create_final_plots.py
+📊 Creating final comparison charts...
+📈 Loaded data with 14 experiments
+📈 Chart 1: Architecture Comparison...
+C:\Users\srava\Downloads\sentiment-analysis-project\src\create_final_plots.py:48: UserWarning: Tight layout not applied. tight_layout cannot make axes width small enough to accommodate all axes decorations
+  plt.tight_layout()
+✅ Saved: architecture_comparison.png
+📈 Chart 2: Optimizer Comparison...
+C:\Users\srava\Downloads\sentiment-analysis-project\src\create_final_plots.py:69: UserWarning: Tight layout not applied. The left and right margins cannot be made large enough to accommodate all axes decorations.
+  plt.tight_layout()
+✅ Saved: optimizer_comparison.png
+📈 Chart 3: Sequence Length Impact...
+✅ Saved: sequence_length_impact.png
+📈 Chart 4: Activation Function Comparison...
+C:\Users\srava\Downloads\sentiment-analysis-project\src\create_final_plots.py:112: UserWarning: Tight layout not applied. The left and right margins cannot be made large enough to accommodate all axes decorations.
+  plt.tight_layout()
+✅ Saved: activation_comparison.png
+📈 Chart 5: Gradient Clipping Comparison...
+Available gradient_clipping values: [ 1. nan]
+Traceback (most recent call last):
+  File "C:\Users\srava\Downloads\sentiment-analysis-project\src\create_final_plots.py", line 128, in <module>
+    no_clip_acc = clip_data[clip_data['gradient_clipping'] == 'None']['accuracy'].values[0] * 100
+IndexError: index 0 is out of bounds for axis 0 with size 0
+
+C:\Users\srava\Downloads\sentiment-analysis-project\src>python create_final_plots.py
+📊 Creating final comparison charts...
+📈 Loaded data with 14 experiments
+📈 Chart 1: Architecture Comparison...
+C:\Users\srava\Downloads\sentiment-analysis-project\src\create_final_plots.py:48: UserWarning: Tight layout not applied. tight_layout cannot make axes width small enough to accommodate all axes decorations
+  plt.tight_layout()
+✅ Saved: architecture_comparison.png
+📈 Chart 2: Optimizer Comparison...
+C:\Users\srava\Downloads\sentiment-analysis-project\src\create_final_plots.py:69: UserWarning: Tight layout not applied. The left and right margins cannot be made large enough to accommodate all axes decorations.
+  plt.tight_layout()
+✅ Saved: optimizer_comparison.png
+📈 Chart 3: Sequence Length Impact...
+✅ Saved: sequence_length_impact.png
+📈 Chart 4: Activation Function Comparison...
+C:\Users\srava\Downloads\sentiment-analysis-project\src\create_final_plots.py:112: UserWarning: Tight layout not applied. The left and right margins cannot be made large enough to accommodate all axes decorations.
+  plt.tight_layout()
+✅ Saved: activation_comparison.png
+📈 Chart 5: Gradient Clipping Comparison...
+Available gradient_clipping values: [ 1. nan]
+✅ Saved: gradient_clipping_comparison.png
+📈 Chart 6: Top 5 Best Models...
+✅ Saved: top_models.png
+
+🎉 All charts created successfully!
+📁 Check results/plots/ folder for all visualizations!
+
+C:\Users\srava\Downloads\sentiment-analysis-project\src>python create_final_report.py
+python: can't open file 'C:\\Users\\srava\\Downloads\\sentiment-analysis-project\\src\\create_final_report.py': [Errno 2] No such file or directory
+
+C:\Users\srava\Downloads\sentiment-analysis-project\src>cd..
+
+C:\Users\srava\Downloads\sentiment-analysis-project>python create_final_report.py
+📝 Creating Final Homework Report...
+Traceback (most recent call last):
+  File "C:\Users\srava\Downloads\sentiment-analysis-project\create_final_report.py", line 13, in <module>
+    df = pd.read_csv('results/metrics.csv')
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\parsers\readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\parsers\readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\parsers\readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\parsers\readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\srava\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'results/metrics.csv'
+
+C:\Users\srava\Downloads\sentiment-analysis-project>cd src
+
+C:\Users\srava\Downloads\sentiment-analysis-project\src>python create_final_report.py
+📝 Creating Final Homework Report...
+✅ Found metrics file at: results/metrics.csv
+📊 Loaded 14 experimental results
+✅ Report saved as: results/Homework_3_Report.pdf
+🎓 YOUR HOMEWORK IS COMPLETE AND READY TO SUBMIT!
+
+📁 FINAL DELIVERABLES:
+✅ results/Homework_3_Report.pdf - Professional PDF report
+✅ results/metrics.csv - All experimental results
+✅ results/plots/ - All comparison charts and training plots
+✅ src/ - All source code files
+✅ data/ - Preprocessed dataset
+
+🌟 EXCELLENT WORK! YOU'VE COMPLETED ALL REQUIREMENTS! 🌟
+
+C:\Users\srava\Downloads\sentiment-analysis-project\src>python create_final_report.py
+  File "C:\Users\srava\Downloads\sentiment-analysis-project\src\create_final_report.py", line 1
+    \documentclass[12pt]{article}
+     ^
+SyntaxError: unexpected character after line continuation character
